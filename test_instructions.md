@@ -15,11 +15,13 @@ cd blockchain-client
 
 ### 2. Test Go Application Locally
 ```bash
+# Install Go
+sudo yum install -y golang
 # Ensure Go is installed
 go version
 
 # Run unit tests
-go test ./...
+go test -v ./...
 
 # If tests fail due to missing dependencies, install them
 go mod tidy
