@@ -37,7 +37,7 @@ aws ecr create-repository \
     --repository-name $REPOSITORY_NAME \
     --region $AWS_REGION
 
-# Authenticate Docker to ECR (if Docker is available)
+# Authenticate Docker to ECR
 aws ecr get-login-password --region $AWS_REGION | \
     docker login --username AWS --password-stdin \
     $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
@@ -45,6 +45,11 @@ aws ecr get-login-password --region $AWS_REGION | \
 
 ### 4. Terraform Deployment
 ```bash
+# Install terraform
+yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.release.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
 # Navigate to terraform directory
 cd terraform
 
