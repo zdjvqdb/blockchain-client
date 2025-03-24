@@ -46,7 +46,7 @@ aws ecr get-login-password --region $AWS_REGION | \
 ### 4. Terraform Deployment
 ```bash
 # Install terraform
-yum install -y yum-utils
+sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.release.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform
 
