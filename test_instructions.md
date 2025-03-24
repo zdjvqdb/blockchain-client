@@ -35,7 +35,7 @@ aws configure
 # Provide:
 # - AWS Access Key ID
 # - AWS Secret Access Key
-# - Default region (e.g., us-west-2)
+# - Default region
 # - Output format (json)
 ```
 
