@@ -22,10 +22,6 @@ go version
 
 # Run unit tests
 go test -v ./...
-
-# If tests fail due to missing dependencies, install them
-go mod tidy
-go mod download
 ```
 
 ### 3. Prepare AWS Deployment
