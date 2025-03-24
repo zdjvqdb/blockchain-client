@@ -30,17 +30,6 @@ go mod download
 
 ### 3. Prepare AWS Deployment
 
-#### Configure AWS CLI (if not already configured)
-```bash
-# Configure AWS credentials
-aws configure
-# Provide:
-# - AWS Access Key ID
-# - AWS Secret Access Key
-# - Default region
-# - Output format (json)
-```
-
 #### Create ECR Repository
 ```bash
 # Create ECR repository
