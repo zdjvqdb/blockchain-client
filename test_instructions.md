@@ -22,7 +22,7 @@ go version
 
 # Run unit tests
 go test -v ./...
-
+```
 
 ### 3. Terraform Deployment
 ```bash
