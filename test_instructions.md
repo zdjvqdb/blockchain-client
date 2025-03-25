@@ -50,6 +50,7 @@ terraform apply
 ```
 
 ### 4. Verify Deployment
+```bash
 # Get the ECS task ARN
 CLUSTER_NAME=$(terraform output -raw ecs_cluster_name)
 TASK_ARN=$(aws ecs list-tasks --cluster $CLUSTER_NAME --query 'taskArns[0]' --output text)
@@ -60,8 +61,11 @@ PUBLIC_IP=$(aws ec2 describe-network-interfaces --network-interface-ids $TASK_EN
 
 # Test endpoints
 curl http://$PUBLIC_IP:8080/block-number
-curl "http://$PUBLIC_IP:8080/block?number=0x134e82a"```
+curl "http://$PUBLIC_IP:8080/block?number=0x134e82a"
+```
 
 ### 5. Cleanup
+```bash
 # Destroy resources when done
 terraform destroy
+```
