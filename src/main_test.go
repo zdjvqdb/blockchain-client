@@ -9,7 +9,6 @@ func TestGetBlockNumber(t *testing.T) {
 
         blockNumber, err := client.GetBlockNumber()
         if err != nil {
-        if err != nil {
                 t.Fatalf("Failed to get block number: %v", err)
         }
 
